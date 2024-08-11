@@ -1,0 +1,31 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'junit:junit:4.13.2'
+}
+
+test {
+    useJunitPlatform()
+}
+
+sourceSets {
+    main {
+        java{
+            srcDirs = ['src']
+        }
+    }
+    test{
+        java{
+            srcDirs = ['testclasses']
+        }
+    }
+}
